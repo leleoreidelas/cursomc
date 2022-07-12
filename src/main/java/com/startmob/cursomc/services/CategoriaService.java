@@ -1,10 +1,10 @@
 package com.startmob.cursomc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -49,4 +49,7 @@ public class CategoriaService {
 		}
 	}
 	
+	public List<Categoria> findAll() {
+		return repo.findAll();
+	}
 }
