@@ -21,7 +21,7 @@ import com.startmob.cursomc.dto.CategoriaDTO;
 import com.startmob.cursomc.services.CategoriaService;
 
 @RestController
-@RequestMapping(value = "/categorias ")
+@RequestMapping(value = "/categorias")
 public class CategoriaResource {
 
 	private static final String List = null;
@@ -29,7 +29,7 @@ public class CategoriaResource {
 	private CategoriaService service;
 	private Integer page2;
 
-	@RequestMapping(value = "{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Optional<Categoria>> find(@PathVariable Integer id) {
 		Optional<Categoria> obj = service.find(id);
 

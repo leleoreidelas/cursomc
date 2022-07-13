@@ -40,8 +40,15 @@ public class CategoriaService {
 	}
 
 	public Categoria update(Categoria obj) {
-		find(obj.getId());
-		return repo.save(obj);
+		 Categoria newObj = findAll(obj.getId());
+		 updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+
+
+	private Categoria findAll(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public void delete(Integer id) {
@@ -67,5 +74,9 @@ public class CategoriaService {
 		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 	
+
+	private void updateData(Categoria newObj, Categoria obj) {
+	newObj.setNome(obj.getNome());
 	
+	}
 }
