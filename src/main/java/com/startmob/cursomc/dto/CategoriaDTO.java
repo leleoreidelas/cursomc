@@ -29,7 +29,7 @@ public class CategoriaDTO implements Serializable {
 		nome = obj.getNome();
 	}
 
-	public Integer getId() {
+	public Integer getId() { 
 		return id;
 	}
    
