@@ -47,7 +47,7 @@ public class CategoriaService {
 
 
 	private Categoria findAll(Integer id) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
